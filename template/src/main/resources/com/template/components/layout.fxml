@@ -19,7 +19,7 @@
         <!-- Zone principale à droite : header en haut, contenu en dessous -->
         <BorderPane HBox.hgrow="ALWAYS">
             <top>
-                <fx:include source="header.fxml"/>
+                <fx:include fx:id="header" source="header.fxml"/>
             </top>
 
             <center>

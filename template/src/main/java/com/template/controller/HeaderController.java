@@ -6,11 +6,19 @@ import javafx.scene.control.Button;
 public class HeaderController {
     @FXML
     private Button menuButton;
-    
+
+    // Référence vers le contrôleur principal pour piloter le menu latéral
+    private DashboardController dashboardController;
+
+    public void setDashboardController(DashboardController dashboardController) {
+        this.dashboardController = dashboardController;
+    }
+
     @FXML
     private void toggleMenu() {
-        // Cette méthode sera appelée par le bouton de menu
-        // La logique est gérée par le DashboardController via l'événement
+        if (dashboardController != null) {
+            dashboardController.toggleMenu();
+        }
     }
     
     @FXML

@@ -39,11 +39,13 @@
         </Button>
         
         <!-- Avatar -->
-        <StackPane styleClass="avatar-container">
-            <Circle radius="18" fill="#e0e0e0"/>
-            <FontIcon iconLiteral="mdi2a-account-circle" iconSize="22" />
-            <Button styleClass="avatar-button" onAction="#showUserMenu"/>
-        </StackPane>
+        <!-- Remplace l'URL par le chemin réel de ton image d'avatar -->
+    <ImageView fitWidth="32" fitHeight="32" preserveRatio="true"
+               smooth="true" pickOnBounds="true">
+        <image>
+            <Image url="@../images/avatar.png" />
+        </image>
+    </ImageView>
     </HBox>
     
     <stylesheets>

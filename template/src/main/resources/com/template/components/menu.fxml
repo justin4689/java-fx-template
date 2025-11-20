@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 <?import com.template.model.*?>
@@ -13,8 +14,33 @@
     <padding><Insets top="20" right="10" bottom="20" left="10"/></padding>
     <spacing>10</spacing>
 
-    <Label text="MENU" styleClass="menu-title"/>
-    <Separator/>
+    <!-- Logo centré horizontalement -->
+    <HBox alignment="CENTER">
+        <ImageView fitWidth="32" fitHeight="32" preserveRatio="true"
+                   smooth="true" pickOnBounds="true">
+            <image>
+                <Image url="@../images/logo.jpg" />
+            </image>
+        </ImageView>
+    </HBox>
+
+
+        <!-- Bloc avatar + nom/prénom utilisateur -->
+        <HBox alignment="CENTER_LEFT" spacing="10" styleClass="user-info">
+            <!-- Remplace l'URL par le chemin réel de ton image d'avatar -->
+            <ImageView fitWidth="32" fitHeight="32" preserveRatio="true"
+                       smooth="true" pickOnBounds="true">
+                <image>
+                    <Image url="@../images/avatar.png" />
+                </image>
+            </ImageView>
+            <VBox>
+                <Label text="John Doe" styleClass="user-name"/>
+                <Label text="Administrateur" styleClass="user-role"/>
+            </VBox>
+        </HBox>
+    <Label text="MENU DE NAVIGATION" styleClass="menu-title"/>
+
 
     <Button fx:id="btnDashboard" id="btnDashboard" text="Tableau de bord" onAction="#loadDashboard" styleClass="menu-btn">
         <graphic>

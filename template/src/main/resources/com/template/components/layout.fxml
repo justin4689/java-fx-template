@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import com.template.model.*?>
+<?import java.net.*?>
+
+<HBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.template.controller.DashboardController"
+      styleClass="dashboard-root">
+
+    <!-- Sidebar à gauche -->
+    <children>
+        <HBox fx:id="menuContainer">
+            <fx:include fx:id="menu" source="menu.fxml"/>
+        </HBox>
+
+        <!-- Zone principale à droite : header en haut, contenu en dessous -->
+        <BorderPane HBox.hgrow="ALWAYS">
+            <top>
+                <fx:include source="header.fxml"/>
+            </top>
+
+            <center>
+                <StackPane fx:id="contentArea" styleClass="content-area">
+                    <padding>
+                        <Insets top="20" right="20" bottom="20" left="20"/>
+                    </padding>
+                </StackPane>
+            </center>
+
+            <stylesheets>
+                <URL value="@css/styles.css" />
+            </stylesheets>
+        </BorderPane>
+    </children>
+</HBox>

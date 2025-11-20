@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import com.template.model.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.template.controller.MenuController"
+      prefWidth="250" styleClass="app-menu-lateral-container" id="app-menu-lateral-container">
+
+    <padding><Insets top="20" right="10" bottom="20" left="10"/></padding>
+    <spacing>10</spacing>
+
+    <Label text="MENU" styleClass="menu-title"/>
+    <Separator/>
+
+    <Button fx:id="btnDashboard" id="btnDashboard" text="Tableau de bord" onAction="#loadDashboard" styleClass="menu-btn"/>
+    <Button fx:id="btnClients" id="btnClients" text="Clients" onAction="#loadClients" styleClass="menu-btn"/>
+    <Button fx:id="btnUserManagement" id="btnUserManagement" text="Gestion des utilisateurs" onAction="#loadUserManagement" styleClass="menu-btn"/>
+    <Button fx:id="btnSettings" id="btnSettings" text="Paramètre" onAction="#loadSettings" styleClass="menu-btn"/>
+
+    <!-- Espaceur -->
+    <VBox VBox.vgrow="ALWAYS"/>
+    <Button fx:id="btnLogout" text="🚪 Déconnexion" onAction="#handleLogout" styleClass="menu-btn-logout"/>
+</VBox>
+

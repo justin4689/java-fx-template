@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import com.template.model.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.template.controller.LoginController"
+            styleClass="auth-container">
+
+    <!-- Utilisation de la propriété par défaut "center" -->
+    <center>
+        <VBox alignment="CENTER" spacing="15" maxWidth="400">
+            <padding><Insets top="20" right="20" bottom="20" left="20"/></padding>
+            <Text text="Connexion" styleClass="auth-title"/>
+            <TextField fx:id="emailField" promptText="Email"/>
+            <PasswordField fx:id="passwordField" promptText="Mot de passe"/>
+            <Button text="Se connecter" onAction="#handleLogin" styleClass="btn-primary"/>
+        </VBox>
+    </center>
+</BorderPane>
+

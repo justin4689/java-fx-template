@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import com.template.model.*?>
+
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      spacing="15" style="-fx-padding: 20; -fx-background-color: white;">
+
+    <HBox alignment="CENTER_LEFT" spacing="20">
+        <Label text="Gestion des Clients" style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
+    </HBox>
+
+</VBox>

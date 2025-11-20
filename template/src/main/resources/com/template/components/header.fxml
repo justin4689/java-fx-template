@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import java.net.*?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<HBox maxHeight="-Infinity" maxWidth="Infinity" minHeight="-Infinity" minWidth="-Infinity" 
+      prefHeight="80.0" prefWidth="-1.0"
+      styleClass="header" 
+      xmlns="http://javafx.com/javafx/17" 
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.template.controller.HeaderController"
+      
+      >
+    
+    <!-- Partie gauche avec bouton de menu -->
+    <HBox alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+        <Button id="menuButton" styleClass="menu-button" onAction="#toggleMenu">
+            <graphic>
+                <FontIcon iconLiteral="mdi2m-menu" iconSize="24" />
+            </graphic>
+        </Button>
+    </HBox>
+    
+    <!-- Partie droite avec icônes -->
+    <HBox alignment="CENTER_RIGHT" spacing="15" styleClass="header-right">
+        <!-- Bouton de notification -->
+        <Button styleClass="icon-button" onAction="#showNotifications">
+            <graphic>
+                <StackPane>
+                    <FontIcon iconLiteral="mdi2b-bell-outline" iconSize="20" />
+                    <Circle radius="4" fill="#ff4444" style="-fx-translate-x: 5px; -fx-translate-y: -5px;"/>
+                </StackPane>
+            </graphic>
+        </Button>
+        
+        <!-- Avatar -->
+        <StackPane styleClass="avatar-container">
+            <Circle radius="18" fill="#e0e0e0"/>
+            <FontIcon iconLiteral="mdi2a-account-circle" iconSize="22" />
+            <Button styleClass="avatar-button" onAction="#showUserMenu"/>
+        </StackPane>
+    </HBox>
+    
+    <stylesheets>
+        <URL value="@../css/header.css" />
+    </stylesheets>
+</HBox>

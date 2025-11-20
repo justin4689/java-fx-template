@@ -31,7 +31,7 @@
             </center>
 
             <stylesheets>
-                <URL value="@css/styles.css" />
+                <URL value="@../css/styles.css" />
             </stylesheets>
         </BorderPane>
     </children>

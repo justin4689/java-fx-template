@@ -30,7 +30,7 @@
 
     /* ==================== ARRIÈRE-PLANS ==================== */
     -fx-bg-color: #ffffff;               /* Fond principal */
-    -fx-bg-gray: #f6f7fb;                /* Fond gris sections */
+    -fx-bg-gray: #fafbfe;                /* Fond gris sections */
     -fx-bg-hover: #f8f9fa;               /* Hover général */
 
     /* ==================== TEXTES ==================== */
@@ -110,6 +110,15 @@
     -fx-icon-color: -fx-primary-color;
 }
 
+#app-menu-lateral-container .menu-btn Label {
+    -fx-text-fill: -fx-text-normal;
+}
+
+#app-menu-lateral-container .menu-btn:hover Label,
+#app-menu-lateral-container .menu-btn.active Label {
+    -fx-text-fill: -fx-primary-color;
+}
+
 #app-menu-lateral-container .menu-btn-logout {
     -fx-background-color: -fx-primary-color;  /* Violet #fa5c7c */
     -fx-text-fill: -fx-text-on-primary;
@@ -124,10 +133,37 @@
     -fx-background-color: -fx-primary-600;    /* Violet foncé */
 }
 
+/* Sous-menu de Paramètre */
+#app-menu-lateral-container .submenu {
+    -fx-padding: 0 0 0 25;
+}
+
+#app-menu-lateral-container .submenu-btn {
+    -fx-background-color: transparent;
+    -fx-text-fill: -fx-text-muted;
+    -fx-font-size: 12px;
+    -fx-padding: 4 15;
+    -fx-alignment: baseline-left;
+}
+
+#app-menu-lateral-container .submenu-btn:hover {
+    -fx-text-fill: -fx-primary-color;
+}
+
+#app-menu-lateral-container .submenu-btn.active {
+    -fx-text-fill: -fx-primary-color;
+}
+
 /* -------------------------------------------------------------------
    -------------------   Contenu du dashboard    ----------------------
    ------------------------------------------------------------------- */
 /* Styles spécifiques au dashboard ici */
+
+/* Zone centrale de contenu */
+.content-area {
+    -fx-background-color: -fx-bg-gray; /* gris défini en haut dans .root */
+    -fx-background-radius: 8;
+}
 
 /* -------------------------------------------------------------------
    --------------   Contenu Gestion Utilisateur    -----------------

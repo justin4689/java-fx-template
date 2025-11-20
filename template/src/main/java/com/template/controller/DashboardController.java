@@ -50,7 +50,7 @@ public class DashboardController implements Initializable {
 
         // Ajuste la marge du contentArea en fonction de l'état du menu
         if (isMenuVisible) {
-            contentArea.setStyle("-fx-padding: 0 0 0 200;"); // Ajustez la largeur selon votre menu
+            contentArea.setStyle("-fx-padding: 0 0 15 15;"); // Ajustez la largeur selon votre menu
         } else {
             contentArea.setStyle("-fx-padding: 0;");
         }

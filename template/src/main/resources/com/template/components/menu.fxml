@@ -57,11 +57,26 @@
             <FontIcon iconLiteral="mdi2a-account-cog" iconSize="18" />
         </graphic>
     </Button>
-    <Button fx:id="btnSettings" id="btnSettings" text="Paramètre" onAction="#loadSettings" styleClass="menu-btn">
-        <graphic>
-            <FontIcon iconLiteral="mdi2c-cog" iconSize="18" />
-        </graphic>
-    </Button>
+    <VBox spacing="0">
+        <Button fx:id="btnSettings" id="btnSettings" onAction="#toggleSettingsSubmenu"
+                styleClass="menu-btn" contentDisplay="GRAPHIC_ONLY">
+            <graphic>
+                <HBox alignment="CENTER_LEFT" spacing="8">
+                    <FontIcon iconLiteral="mdi2c-cog" iconSize="18" />
+                    <Label text="Paramètres" />
+                    <Region HBox.hgrow="ALWAYS" />
+                    <FontIcon fx:id="settingsChevronIcon" iconLiteral="mdi2c-chevron-right" iconSize="16" />
+                </HBox>
+            </graphic>
+        </Button>
+
+        <!-- Sous-menu Paramètre -->
+        <VBox fx:id="settingsSubmenu" styleClass="submenu" visible="false" managed="false">
+            <Button fx:id="btnSettingsGeneral"   text="Général"   onAction="#loadSettings" styleClass="submenu-btn"/>
+            <Button fx:id="btnSettingsSecurity"  text="Sécurité"  onAction="#loadSettings" styleClass="submenu-btn"/>
+            <Button fx:id="btnSettingsAppearance" text="Apparence" onAction="#loadSettings" styleClass="submenu-btn"/>
+        </VBox>
+    </VBox>
 
     <!-- Espaceur -->
     <VBox VBox.vgrow="ALWAYS"/>

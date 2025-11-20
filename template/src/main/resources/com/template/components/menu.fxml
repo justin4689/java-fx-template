@@ -4,6 +4,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 <?import com.template.model.*?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
 
 <VBox xmlns:fx="http://javafx.com/fxml"
       fx:controller="com.template.controller.MenuController"
@@ -15,10 +16,26 @@
     <Label text="MENU" styleClass="menu-title"/>
     <Separator/>
 
-    <Button fx:id="btnDashboard" id="btnDashboard" text="Tableau de bord" onAction="#loadDashboard" styleClass="menu-btn"/>
-    <Button fx:id="btnClients" id="btnClients" text="Clients" onAction="#loadClients" styleClass="menu-btn"/>
-    <Button fx:id="btnUserManagement" id="btnUserManagement" text="Gestion des utilisateurs" onAction="#loadUserManagement" styleClass="menu-btn"/>
-    <Button fx:id="btnSettings" id="btnSettings" text="Paramètre" onAction="#loadSettings" styleClass="menu-btn"/>
+    <Button fx:id="btnDashboard" id="btnDashboard" text="Tableau de bord" onAction="#loadDashboard" styleClass="menu-btn">
+        <graphic>
+            <FontIcon iconLiteral="mdi2v-view-dashboard" iconSize="18" />
+        </graphic>
+    </Button>
+    <Button fx:id="btnClients" id="btnClients" text="Clients" onAction="#loadClients" styleClass="menu-btn">
+        <graphic>
+            <FontIcon iconLiteral="mdi2a-account-group" iconSize="18" />
+        </graphic>
+    </Button>
+    <Button fx:id="btnUserManagement" id="btnUserManagement" text="Gestion des utilisateurs" onAction="#loadUserManagement" styleClass="menu-btn">
+        <graphic>
+            <FontIcon iconLiteral="mdi2a-account-cog" iconSize="18" />
+        </graphic>
+    </Button>
+    <Button fx:id="btnSettings" id="btnSettings" text="Paramètre" onAction="#loadSettings" styleClass="menu-btn">
+        <graphic>
+            <FontIcon iconLiteral="mdi2c-cog" iconSize="18" />
+        </graphic>
+    </Button>
 
     <!-- Espaceur -->
     <VBox VBox.vgrow="ALWAYS"/>

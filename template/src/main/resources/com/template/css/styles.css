@@ -35,9 +35,9 @@
 
     /* ==================== TEXTES ==================== */
     -fx-text-on-primary: #ffffff;        /* Texte sur fond primaire */
-    -fx-text-muted: #98a6ad;             /* Texte secondaire */
+    -fx-text-muted: #6c757d;             /* Texte secondaire */
     -fx-text-subtle: #6c757d;            /* Texte subtil */
-    -fx-text-normal: #313a46;            /* Texte principal */
+    -fx-text-normal: #6c757d;            /* Texte principal */
     -fx-text-heading: #272e37;           /* Titres */
 
     /* ==================== BORDURES & OMBRES ==================== */
@@ -65,7 +65,7 @@
     -fx-background-color: transparent;
     -fx-text-fill: -fx-text-normal;      /* Texte principal #313a46 */
     -fx-font-size: 14px;
-    -fx-padding: 12 15;
+    -fx-padding: 5 15;
     -fx-alignment: baseline-left;
     -fx-cursor: hand;
     -fx-max-width: infinity;
@@ -73,16 +73,26 @@
     -fx-border-radius: 5;
 }
 
+#app-menu-lateral-container .menu-btn FontIcon {
+    -fx-icon-color: -fx-text-normal;
+}
+
 #app-menu-lateral-container .menu-btn:hover {
-    -fx-background-color: -fx-primary-100; /* Fond violet très clair */
+    -fx-background-color: #ffffff; /* Fond violet très clair */
     -fx-text-fill: -fx-primary-color;      /* Texte violet */
 }
 
+#app-menu-lateral-container .menu-btn:hover FontIcon {
+    -fx-icon-color: -fx-primary-color;
+}
+
 #app-menu-lateral-container .menu-btn.active {
-    -fx-background-color: -fx-primary-color; /* Violet principal */
-    -fx-text-fill: -fx-text-on-primary;      /* Texte blanc */
-    -fx-font-weight: bold;
-    -fx-effect: -fx-shadow-sm;               /* Ombre violette */
+    -fx-background-color: #ffffff; /* Violet principal */
+    -fx-text-fill: -fx-primary-color;      /* Texte violet */
+}
+
+#app-menu-lateral-container .menu-btn.active FontIcon {
+    -fx-icon-color: -fx-primary-color;
 }
 
 #app-menu-lateral-container .menu-btn-logout {
